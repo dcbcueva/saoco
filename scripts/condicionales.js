@@ -256,7 +256,7 @@ numeroMes=3;
   }
   console.log("El mes de " + mes + " se encuentra en la estación " + estacion);
 
-  let online = true;
+let online = true;
 let active = true;
 if(online) {
   if (active) {
