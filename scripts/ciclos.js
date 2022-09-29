@@ -35,3 +35,56 @@ function reemplazarOInsertar(myA, stringToReplace, newString) {
     return myA;
 }
 console.log(reemplazarOInsertar(myArray, 11, "Rodrigo"));
+
+//---------------------------------------------------------------------------
+/**
+ * FIFO:
+ *       E3   E2  E1 --->  [ arreglo  ] --->  E3   E2  E1
+ * LIFO: 
+ *       E3   E2  E1 --->  [ arreglo  ] --->  E1   E2  E3
+ */
+ console.log("#####  FIFO LIFO ######")
+ const perecederos = ["manzanas", "quesos","fresas"]; 
+ //FIFO
+ //Agregamos un elemento al final del arreglo:
+ perecederos.push("leche");//4to elemento
+ console.log(perecederos);
+ //Sacamos el primer elemento del arreglo
+ console.log("Elemento eliminado "+perecederos.shift());
+ console.log(perecederos);
+//LIFO
+console.log("\n----- LIFO ----- ");
+const tienda =[...perecederos]; // se clona el arreglo perecederos en tienda == perecederos.slice();
+console.log(tienda);
+ //Agregamos un elemento al final del arreglo:
+ tienda.push("el amor");//4to elemento
+ console.log(tienda);
+ //sacamos el ultimo elemento en entrar
+ tienda.pop();
+ console.log(tienda);
+ 
+ 
+ const numArray = [2,4,5,6]
+
+ const duplicated = numArray.map(num => num * 2)
+ 
+ console.log(duplicated)
+
+ //--------------------------------------------------------
+console.log("##### Calccular el factorial de un número ######");
+function factorialRecursivo (n) { 
+	if (n == 0){ 
+		return 1; 
+	}
+	return n * factorialRecursivo (n-1); 
+}
+console.log(factorialRecursivo(5));
+//--------------------------------------------------------
+console.log('##### De la palabra "Pepe Pecas Pica Papas" saber cuantas "e" tiene ######');
+console.log(Array.from(`pepe pecas pica papas`).map(element=> (element == "e") *1 ).reduce((a,b)=>a+b));
+const phrase = "Pepe Pecas Pica Papas"
+
+const getHowManyCharacters = (str, ch) => str.split("").filter(e => e === ch).length
+
+
+console.log(getHowManyCharacters(phrase, "e"))
