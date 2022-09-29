@@ -5,7 +5,7 @@ console.log("Sesión JS04 Ciclos")
  * arreglo u objeto con const, es para evitar 
  * que se cambie el *tipo* de dato:
  */
-let arrayLet = [1,2,3,4];
+/* let arrayLet = [1,2,3,4];
 const myArray = [10,11,12];
 
 myArray.push("Holi Crayoli 2");
@@ -34,7 +34,7 @@ function reemplazarOInsertar(myA, stringToReplace, newString) {
     : myA;
     return myA;
 }
-console.log(reemplazarOInsertar(myArray, 11, "Rodrigo"));
+console.log(reemplazarOInsertar(myArray, 11, "Rodrigo")); */
 
 //---------------------------------------------------------------------------
 /**
@@ -43,7 +43,7 @@ console.log(reemplazarOInsertar(myArray, 11, "Rodrigo"));
  * LIFO: 
  *       E3   E2  E1 --->  [ arreglo  ] --->  E1   E2  E3
  */
- console.log("#####  FIFO LIFO ######")
+/*  console.log("#####  FIFO LIFO ######")
  const perecederos = ["manzanas", "quesos","fresas"]; 
  //FIFO
  //Agregamos un elemento al final del arreglo:
@@ -88,3 +88,103 @@ const getHowManyCharacters = (str, ch) => str.split("").filter(e => e === ch).le
 
 
 console.log(getHowManyCharacters(phrase, "e"))
+
+console.log("para imprimir el que tiene mas");
+const phrase2 = "Pepe Pecas Pica Papas"
+Array.from(`pepe pecas pica papas`).map(element=> (element == "e") *1 ).reduce((a,b)=>a+b);
+
+console.log("\n ### Cliclo For ###"); */
+/**
+ * sintaxis ciclo for
+ * for (inicio;condicion;expresionfinal){
+ *  instrucciones;
+ * }
+ */
+
+//for(let i=0;i<=10;i++)
+    //console.log("El valor de la iteracion es: " +i);
+    //console.log("El valor de la iteracion +1 = " (i+1));
+
+
+//console.log("\n ### For con continue y break ### ");
+/**
+ * la instruccion break, rompe el ciclo no importa el n. de iteracion donde se encuentre
+ * la instruccion continue, interrumpe la iteracion encurso y continua a la sig. iteracion
+ */
+ //let ch18 = ["Abelardo", "Audery", "Angel", "Sharon", "Bren", "Pato Lucas", "Victor"];
+/* for (let i = 0; i < ch18.length; i++) {
+    if(ch18[i]==='Pato Lucas'){
+        console.warn("Atencion, esta persona no pertenece a la CH18" +ch18[i]);
+        break;
+    }
+    console.log("Persona de Ch18: "+ch18[i]);
+} */
+/* for (let i = 0; i < ch18.length; i++) {
+    if(ch18[i] !== "Pato Lucas") continue;
+    console.warn("Atencion, esta persona no pertenece a la CH18" +ch18[i]);
+}
+
+console.log("\n ### Matrices ### ");
+
+const generation=[
+    ["Abelardo", "Audery", "Angel", "Sharon", "Bren", "El bromas", "Victor"],
+    ["Yosceline", "Mariana", "Karen", "Pedro"],
+    ["Emiliano", "Jonathan", "Esteban", "El bromas"]
+]; */
+//for par aimprimir todos los nombres de mi arreglo de arreglos
+/* for(let i=0; i<generation.length;i++){
+    console.log(`Los integrantes de la corte ${i+1} son: `)
+    for(let j=0; j<generation[i].length;j++){
+        console.log(generation[i][j]);
+    }
+}
+ */
+//for para imprimir el bromas y su lugar en el arreglo de arreglos
+/* continua_buscando:
+for(let i=0; i<generation.length;i++){
+    for(let j=0; j<generation[i].length;j++){
+        if (generation[i][j]==="El bromas"){ 
+            console.warn(`El bromas esta en la corte ${i+1} en la poscicion ${j+1}`);
+            //continue continua_buscando;
+            //break continua_buscando;
+        }
+        //console.log(`Numero de iteracion ${i}-${j}`);
+    }
+} */
+
+//--------------------------------------------------------
+//------------------------Ciclo While--------------------------------
+/**
+ * Sintaxis:
+ *  while(condicion){
+ *  instrucion;}
+ */
+/* console.log("\n ### ciclo while### ");
+let findNumber=true;
+let number=1;
+while(findNumber){
+    if (confirm(`¿El número es ${number}?`)) {
+        findNumber=false;
+        alert(`Felicidades tu número es ${number}`)
+    }
+    else if (number>10) {
+        findNumber=false;
+        alert(`No sabes jugar`)
+    }
+    number++;
+} */
+/* let bandera = false;
+while(bandera){
+    console.log("Mensaje dentro del cilo while");
+}
+do{
+    console.log("mensaje dentro del do while")
+}while(bandera); */
+let contador =0;
+do{
+    console.log("Mensaje dentro del cilo while");
+}while(++contador<10)
+contador =3;
+while(contador++<10){
+    console.log("Mensaje dentro del cilo while "+contador);
+}
