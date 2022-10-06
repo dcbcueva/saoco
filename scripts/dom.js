@@ -3,7 +3,10 @@ console.log("Sesion JS06 DOM")
 //encontrarPorId();
 //encontaraPorTagName();
 //encontrarPorClase();
-encontrarPorSelector();
+//encontrarPorSelector();
+crearElemento();
+cambiarEstilo();
+
 
 function encontrarPorId(){
     //obtenemos el objeto a través de su ID
@@ -40,4 +43,15 @@ function encontrarPorSelector(){
     console.log(`Elementos encontrados: ${elements.length}`);
 
     elements[0].innerHTML = "ganas de comprar";
+}
+
+function cambiarEstilo(){
+    const elements = document.querySelectorAll("p>.color");
+    elements[0].style.color="red";
+}
+
+function crearElemento(){
+    const nuevoElemento= document.createElement("p");
+    nuevoElemento.innerHTML= `Este es un nuevo <strong class="color">párrafo</strong>`
+    document.getElementById("titulo").appendChild(nuevoElemento);
 }
