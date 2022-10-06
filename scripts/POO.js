@@ -37,8 +37,34 @@ let coraline = {
         nombre: "Henry Selik",
         pais: "USA"
     },
-    mostarActores: () => {
-        coraline.actores.forEach(info => { console.log(`Actor: ${info.nombre} del pais: ${info.pais}`); });
+    /*     mostarActores: () => {
+            coraline.actores.forEach(info => { console.log(`Actor: ${info.nombre} del pais: ${info.pais}`); });
+        }  */
+    mostarActores: function () {
+        //La palabra reservada this hace referencia al objeto que lo invoque 
+        this.actores.forEach((info) => {
+            console.log(`Actor: ${info.nombre} del pais: ${info.pais}`);
+        });
+    },
+    mostarDirectores: function () {
+        console.log(`Director: ${this.directores.nombre} del pais: ${this.directores.pais}`);
+    },
+    mostarGeneros: function () {
+        this.genero.forEach((info) => {
+            console.log(`Genero: ${info}`);
+        });
+    },
+    /**
+     * Mostrar Todos los datos de la pelicula.  
+     */
+    mostarTodaInfo: function () {
+        console.log("////////////////////////////")
+        console.log(`Pelicula: ${this.nombre}`);
+        console.log(`Director: ${this.directores.nombre} del pais: ${this.directores.pais}`);
+        console.log(`Duracion: ${this.duracion}`);
+        console.log(`Clasificacion: ${this.clasificacion}`);
+        this.mostarGeneros();
+        this.mostarActores();
     }
 }
 
@@ -61,6 +87,6 @@ coraline.actores.push({ nombre: "Ian MCShane", pais: "UK" });
 coraline.actores.push({ nombre: "Daw French", pais: "UK" });
 //iterar(coraline);
 coraline.mostarActores();
-
+coraline.mostarTodaInfo();
 
 
