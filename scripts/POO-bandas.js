@@ -24,10 +24,15 @@ console.log(paramore.imprimir());
 //Usando polimorfismo -->
 muestraDatos(elRecodo);
 muestraDatos(paramore);
+muestraDatos("La banda me dice que todo lo que hago está mal");
 
 
 function muestraDatos(objBanda){
+    let esTipoBanda = objBanda instanceof Banda;
+    console.log("El dato es del tipo Banda (o heredado): " + esTipoBanda);
+    if(esTipoBanda){
     console.log("===Atención, Toquín de ===");
     console.log(objBanda.imprimir());
     console.log("===  No te lo pierdas  ===");
+    }
 }
