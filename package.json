@@ -1,0 +1,28 @@
+{
+  "name": "saoko",
+  "version": "1.0.3",
+  "description": "Proyecto de Saoko de CH18",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcbcueva/saoco.git"
+  },
+  "keywords": [
+    "saoko",
+    "ch18",
+    "bootstrap",
+    "axios"
+  ],
+  "author": "Diego Bonilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcbcueva/saoco/issues"
+  },
+  "homepage": "https://github.com/dcbcueva/saoco#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
